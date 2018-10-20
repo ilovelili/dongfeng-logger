@@ -61,7 +61,7 @@ var (
 	once            sync.Once
 )
 
-// OperationLog dump operation log to elasticsearch
+// OperationLog opertion level log
 func (l *Log) OperationLog(index Index) {
 	once.Do(func() {
 		option := &Option{Level: InfoLevel}
@@ -71,17 +71,17 @@ func (l *Log) OperationLog(index Index) {
 	operationlogger.Info(l)
 }
 
-// SystemLog dump system log to elasticsearch
+// SystemLog system level log
 func (l *Log) SystemLog(index Index) {
 	once.Do(func() {
 		option := &Option{Level: InfoLevel}
 		systemlogger = StdOutLogger(index, option)
 	})
 
-	systemlogger.Debug(l)
+	systemlogger.Info(l)
 }
 
-// ErrorLog dump error log to elasticsearch
+// ErrorLog error level log
 func (l *Log) ErrorLog(index Index) {
 	once.Do(func() {
 		option := &Option{Level: ErrorLevel}
