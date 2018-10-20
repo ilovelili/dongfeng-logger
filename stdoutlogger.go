@@ -3,7 +3,7 @@ package logger
 import (
 	"os"
 
-	"github.com/Sirupsen/logrus"
+	"github.com/sirupsen/logrus"
 )
 
 // StdOutLogger init a stdout logger
