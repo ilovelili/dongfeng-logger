@@ -100,6 +100,8 @@ const (
 	CoreServer Index = "core_server"
 	// CoreProxy core proxy
 	CoreProxy Index = "core_proxy"
+	// WebSocket websocket
+	WebSocket Index = "websocket"
 	// CronJobs cron jobs
 	CronJobs Index = "cron_jobs"
 )
