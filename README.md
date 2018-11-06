@@ -4,4 +4,4 @@ Logger is a wrapper for Logrus logger. It supports stdout logger currently. Flue
 
 ## Contact
 
-min<route666@live.cn>
+<route666@live.cn>
