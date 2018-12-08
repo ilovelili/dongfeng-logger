@@ -102,6 +102,10 @@ const (
 	CoreProxy Index = "core_proxy"
 	// WebSocket websocket
 	WebSocket Index = "websocket"
+	// AttendanceServer attendance
+	AttendanceServer Index = "attendance_server"
+	// PhysiqueServer physique
+	PhysiqueServer Index = "physique_server"
 	// CronJobs cron jobs
 	CronJobs Index = "cron_jobs"
 )
