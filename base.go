@@ -106,6 +106,8 @@ const (
 	AttendanceServer Index = "attendance_server"
 	// PhysiqueServer physique
 	PhysiqueServer Index = "physique_server"
+	// NutritionServer nutrition
+	NutritionServer Index = "nutrition_server"
 	// CronJobs cron jobs
 	CronJobs Index = "cron_jobs"
 )
