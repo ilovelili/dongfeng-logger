@@ -1,7 +1,6 @@
 package logger
 
 import (
-	"sync"
 	"time"
 
 	"github.com/sirupsen/logrus"
@@ -58,36 +57,26 @@ var (
 	operationlogger *logrus.Logger
 	systemlogger    *logrus.Logger
 	errorlogger     *logrus.Logger
-	once            sync.Once
 )
 
 // OperationLog opertion level log
 func (l *Log) OperationLog(index Index) {
-	once.Do(func() {
-		option := &Option{Level: InfoLevel}
-		operationlogger = StdOutLogger(index, option)
-	})
-
+	option := &Option{Level: InfoLevel}
+	operationlogger = StdOutLogger(index, option)
 	operationlogger.Info(l)
 }
 
 // SystemLog system level log
 func (l *Log) SystemLog(index Index) {
-	once.Do(func() {
-		option := &Option{Level: InfoLevel}
-		systemlogger = StdOutLogger(index, option)
-	})
-
+	option := &Option{Level: InfoLevel}
+	systemlogger = StdOutLogger(index, option)
 	systemlogger.Info(l)
 }
 
 // ErrorLog error level log
 func (l *Log) ErrorLog(index Index) {
-	once.Do(func() {
-		option := &Option{Level: ErrorLevel}
-		errorlogger = StdOutLogger(index, option)
-	})
-
+	option := &Option{Level: ErrorLevel}
+	errorlogger = StdOutLogger(index, option)
 	errorlogger.Error(l)
 }
 
